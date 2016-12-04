@@ -1,64 +1,79 @@
-**Show cars**
+**Dynamic Api**
 ----
   Returns json data about a cars.
 
-* **URL**
+  * **Installation:**
+
+  You Will need Node JS and NPM to install project.
+  1.Run command npm i in the root folder of api project
+  2.App main file is src/server.js
+  3.Dependencies included in package.json file.
+
+
+
+* **Endpoints**
 
  http://localhost:3000/api/cars/
 
- http://localhost:3000/api/cars/:id
+ http://localhost:3000/api/cars/[id]
 
 * **Method:**
 
-  GET /http://localhost:3000/api/cars/
+   Using GET  with endpoint http://localhost:3000/api/cars/
+   would produce the result:
+
+   ``
+   [
+ {
+   "id": 2,
+   "make": "Honda",
+   "model": "Civic",
+   "year": 2013,
+   "createdAt": "2016-12-01T14:30:06.000Z",
+   "updatedAt": "2016-12-01T15:13:47.000Z",
+   "driveid": 1
+ },
+ {
+   "id": 3,
+   "make": "Nissan",
+   "model": "Altima",
+   "year": 2017,
+   "createdAt": "2016-12-01T14:30:25.000Z",
+   "updatedAt": "2016-12-01T14:30:25.000Z",
+   "driveid": 1
+ }
+]
+
+   ``
+
+   Using GET  with endpoint http://localhost:3000/api/cars/3
+   would produce the result:
+
+   ``
+   {
+     "id": 3,
+     "make": "Nissan",
+     "model": "Altima",
+     "year": 2017,
+     "createdAt": "2016-12-01T14:30:25.000Z",
+     "updatedAt": "2016-12-01T14:30:25.000Z",
+     "driveid": 1
+}
+
+   ``
+
+
   POST /http://localhost:3000/api/cars/
   UPDATE /http://localhost:3000/api/cars/:id
   DELETE /http://localhost:3000/api/cars/:id
 
-*  **URL Params**
 
-		/api/cars/
-    /api/cars/:id
-
-
-   **Required:**
-
-   'make =[string]'
-   'model =[string]'
-   'year =[integer]'
-
-* **Data Params**
-
-  None
-
-* **Success Response:**
-
-  * **Code:** 200 <br />
-    **Content:** ` {
-    "id": 2,
-    "make": "Honda",
-    "model": "Civic",
-    "year": 2013,
-    "createdAt": "2016-12-01T14:30:06.000Z",
-    "updatedAt": "2016-12-01T15:13:47.000Z",
-    "driveid": 1
-  }`
-
-* **Error Response:**
-
-  * **Code:** 404 NOT FOUND <br />
-    **Content:** `{ error : "car doesn't exist" }`
-
-  OR
-
-  * **Code:** 401 UNAUTHORIZED <br />
-    **Content:** `{ error : "You are unauthorized to make this request." }`
 
 * **Sample Call:**
 
   ```javascript
     $.ajax({
-      url: "http://localhost:3000/api/cars/",
+      url: "http://domainname/api/cars/",
       dataType: "json",
       type : "GET",
       success : function(err) {
