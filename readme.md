@@ -22,7 +22,8 @@
    Using GET  with endpoint http://localhost:3000/api/cars/
    would produce the result:
 
-   ```[
+   ```
+   [
  {
    "id": 2,
    "make": "Honda",
@@ -57,7 +58,7 @@
      "createdAt": "2016-12-01T14:30:25.000Z",
      "updatedAt": "2016-12-01T14:30:25.000Z",
      "driveid": 1
-}
+   }
    ```
 
 
