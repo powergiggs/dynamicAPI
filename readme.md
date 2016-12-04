@@ -62,9 +62,9 @@
    ```
 
 
-  POST /http://localhost:3000/api/cars/
-  UPDATE /http://localhost:3000/api/cars/:id
-  DELETE /http://localhost:3000/api/cars/:id
+  `POST /http://localhost:3000/api/cars/``
+  `UPDATE /http://localhost:3000/api/cars/:id`
+  `DELETE /http://localhost:3000/api/cars/:id`
 
 
 
