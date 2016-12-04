@@ -48,7 +48,8 @@
    Using GET  with endpoint http://localhost:3000/api/cars/3
    would produce the result:
 
-   ```{
+   ```
+   {
      "id": 3,
      "make": "Nissan",
      "model": "Altima",
@@ -57,7 +58,6 @@
      "updatedAt": "2016-12-01T14:30:25.000Z",
      "driveid": 1
 }
-
    ```
 
 
