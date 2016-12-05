@@ -14,7 +14,7 @@ pool:{
 logging: false,
 
 });
-
+// creat db table cars
 const car = sequelize.define('car',{
   make:{
     type: Sequelize.STRING,
@@ -31,6 +31,8 @@ const car = sequelize.define('car',{
 
 
 });
+
+// create db table drives
 
 const drive = sequelize.define('drive',{
 
